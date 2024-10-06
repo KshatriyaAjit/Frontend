@@ -98,6 +98,18 @@ html,body{
     font-size: 3rem;
 }
 
+.highlight {
+  color: #ff6347; /* Example: Change this to your desired highlight color */
+  font-weight: bold;
+}
+
+.typed-cursor {
+  font-weight: normal;
+  font-size: inherit;
+  color: #ff6347; /* Cursor color matching the text color */
+}
+
+
 .hero-section .bold-text {
     font-weight: 900;
     color: #1f2937;
