@@ -1,7 +1,17 @@
-/* src/components/Header/Header.css */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+
+
+
+
+
+
+
 
 html,body{
   overflow-x: hidden;
@@ -156,14 +166,16 @@ html,body{
 }
 
 .hero-image {
+    display: flex;
+    justify-content: end;
     padding-top: -10px;
 }
 
 .hero-image img {
-    width: 300px;
-    height: 300px;
-    margin-top: 10px;
-    border-radius: 20px;
+  width: 100%; /* Make images responsive */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 300px; /* Set a max width */
+  border-radius: 20px;
 }
 
 h1 {

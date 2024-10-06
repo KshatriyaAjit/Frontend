@@ -1,6 +1,14 @@
 import React, { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
-import heroImage from '../assets/img/hero/hero-home.jpg';
+import { Carousel } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import heroImage1 from '../assets/img/hero/hero-home.jpg';
+import heroImage2 from '../assets/img/blog/blog-image-1.jpg';
+import heroImage3 from '../assets/img/blog/blog-image-2.jpg';
+
+
+
 
 const Hero = () => {
 
@@ -25,6 +33,11 @@ const Hero = () => {
     };
   }, []);
 
+  const images = [
+    { src: heroImage1, alt: 'Hero Slide 1' },
+    { src: heroImage2, alt: 'Hero Slide 2' },
+    { src: heroImage3, alt: 'Hero Slide 3' },
+  ];
 
 
   return (
@@ -36,7 +49,7 @@ const Hero = () => {
   <h1>
     We provide easy 
     <br/>
-    <span className="highlight" ref={highlightText}>solutions </span>
+    <span className="highlight" ref={highlightText} >solutions </span>
     for startups <br /> 
     <span className="bold-text">at affordable rates.</span>
   </h1>
@@ -57,7 +70,23 @@ const Hero = () => {
 
 
 <div className='hero-image'>
-        <img src={heroImage} />
+
+
+
+<Carousel>
+          <Carousel.Item>
+            <img className="d-block w-100" src={heroImage1} alt="First slide" />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block w-100" src={heroImage2} alt="Second slide" />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block w-100" src={heroImage3} alt="Third slide" />
+          </Carousel.Item>
+        </Carousel>
+
+
+
 </div>
 
 
